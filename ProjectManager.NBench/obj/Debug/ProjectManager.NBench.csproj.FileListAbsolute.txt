@@ -1,0 +1,14 @@
+C:\SBA\ProjectManager\ProjectManager.NBench\bin\Debug\ProjectManager.NBench.dll
+C:\SBA\ProjectManager\ProjectManager.NBench\bin\Debug\ProjectManager.NBench.pdb
+C:\SBA\ProjectManager\ProjectManager.NBench\bin\Debug\NBench.dll
+C:\SBA\ProjectManager\ProjectManager.NBench\bin\Debug\ProjectManager.BAL.dll
+C:\SBA\ProjectManager\ProjectManager.NBench\bin\Debug\ProjectManager.DAL.dll
+C:\SBA\ProjectManager\ProjectManager.NBench\bin\Debug\EntityFramework.dll
+C:\SBA\ProjectManager\ProjectManager.NBench\bin\Debug\ProjectManager.BAL.pdb
+C:\SBA\ProjectManager\ProjectManager.NBench\bin\Debug\ProjectManager.BAL.dll.config
+C:\SBA\ProjectManager\ProjectManager.NBench\bin\Debug\ProjectManager.DAL.pdb
+C:\SBA\ProjectManager\ProjectManager.NBench\bin\Debug\ProjectManager.DAL.dll.config
+C:\SBA\ProjectManager\ProjectManager.NBench\bin\Debug\EntityFramework.xml
+C:\SBA\ProjectManager\ProjectManager.NBench\obj\Debug\ProjectManager.NBench.csprojResolveAssemblyReference.cache
+C:\SBA\ProjectManager\ProjectManager.NBench\obj\Debug\ProjectManager.NBench.dll
+C:\SBA\ProjectManager\ProjectManager.NBench\obj\Debug\ProjectManager.NBench.pdb

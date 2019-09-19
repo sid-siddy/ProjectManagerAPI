@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ProjectManagerModelStoreContainer" CdmEntityContainer="ProjectManagerEntities1">
+    <EntitySetMapping Name="tblParents">
+      <EntityTypeMapping TypeName="ProjectManagerModel.tblParent">
+        <MappingFragment StoreEntitySet="tblParent">
+          <ScalarProperty Name="ParentId" ColumnName="ParentId" />
+          <ScalarProperty Name="ParentTask" ColumnName="ParentTask" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblProjects">
+      <EntityTypeMapping TypeName="ProjectManagerModel.tblProject">
+        <MappingFragment StoreEntitySet="tblProject">
+          <ScalarProperty Name="ProjectId" ColumnName="ProjectId" />
+          <ScalarProperty Name="ProjectName" ColumnName="ProjectName" />
+          <ScalarProperty Name="PStartDate" ColumnName="PStartDate" />
+          <ScalarProperty Name="PEndDate" ColumnName="PEndDate" />
+          <ScalarProperty Name="PPriority" ColumnName="PPriority" />
+          <ScalarProperty Name="ManagerId" ColumnName="ManagerId" />
+          <ScalarProperty Name="Nooftasks" ColumnName="Nooftasks" />
+          <ScalarProperty Name="completed" ColumnName="completed" />
+          <ScalarProperty Name="PStatus" ColumnName="PStatus" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblTasks">
+      <EntityTypeMapping TypeName="ProjectManagerModel.tblTask">
+        <MappingFragment StoreEntitySet="tblTask">
+          <ScalarProperty Name="TaskId" ColumnName="TaskId" />
+          <ScalarProperty Name="TaskName" ColumnName="TaskName" />
+          <ScalarProperty Name="TStartDate" ColumnName="TStartDate" />
+          <ScalarProperty Name="TEndDate" ColumnName="TEndDate" />
+          <ScalarProperty Name="TPriority" ColumnName="TPriority" />
+          <ScalarProperty Name="TStatus" ColumnName="TStatus" />
+          <ScalarProperty Name="ParentId" ColumnName="ParentId" />
+          <ScalarProperty Name="ProjectId" ColumnName="ProjectId" />
+          <ScalarProperty Name="ParentTaskName" ColumnName="ParentTaskName" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblUsers">
+      <EntityTypeMapping TypeName="ProjectManagerModel.tblUser">
+        <MappingFragment StoreEntitySet="tblUser">
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="EmployeeId" ColumnName="EmployeeId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

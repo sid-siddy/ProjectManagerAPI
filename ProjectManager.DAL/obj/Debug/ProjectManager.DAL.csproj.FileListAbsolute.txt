@@ -1,0 +1,10 @@
+C:\SBA\ProjectManager\ProjectManager.DAL\bin\Debug\ProjectManager.DAL.dll.config
+C:\SBA\ProjectManager\ProjectManager.DAL\bin\Debug\ProjectManager.DAL.dll
+C:\SBA\ProjectManager\ProjectManager.DAL\bin\Debug\ProjectManager.DAL.pdb
+C:\SBA\ProjectManager\ProjectManager.DAL\bin\Debug\EntityFramework.dll
+C:\SBA\ProjectManager\ProjectManager.DAL\bin\Debug\EntityFramework.SqlServer.dll
+C:\SBA\ProjectManager\ProjectManager.DAL\bin\Debug\EntityFramework.xml
+C:\SBA\ProjectManager\ProjectManager.DAL\bin\Debug\EntityFramework.SqlServer.xml
+C:\SBA\ProjectManager\ProjectManager.DAL\obj\Debug\ProjectManager.DAL.csprojResolveAssemblyReference.cache
+C:\SBA\ProjectManager\ProjectManager.DAL\obj\Debug\ProjectManager.DAL.dll
+C:\SBA\ProjectManager\ProjectManager.DAL\obj\Debug\ProjectManager.DAL.pdb

@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ProjectManagerModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="tblParent">
+    <Key>
+      <PropertyRef Name="ParentId" />
+    </Key>
+    <Property Name="ParentId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ParentTask" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="tblTasks" Relationship="Self.FK__tblTask__ParentI__15502E78" FromRole="tblParent" ToRole="tblTask" />
+  </EntityType>
+  <EntityType Name="tblProject">
+    <Key>
+      <PropertyRef Name="ProjectId" />
+    </Key>
+    <Property Name="ProjectId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ProjectName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="PStartDate" Type="DateTime" Precision="0" />
+    <Property Name="PEndDate" Type="DateTime" Precision="0" />
+    <Property Name="PPriority" Type="Int32" />
+    <Property Name="ManagerId" Type="Int32" />
+    <Property Name="Nooftasks" Type="Int32" />
+    <Property Name="completed" Type="Int32" />
+    <Property Name="PStatus" Type="Boolean" />
+    <NavigationProperty Name="tblTasks" Relationship="Self.FK__tblTask__Project__145C0A3F" FromRole="tblProject" ToRole="tblTask" />
+  </EntityType>
+  <EntityType Name="tblTask">
+    <Key>
+      <PropertyRef Name="TaskId" />
+    </Key>
+    <Property Name="TaskId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TaskName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="TStartDate" Type="DateTime" Precision="0" />
+    <Property Name="TEndDate" Type="DateTime" Precision="0" />
+    <Property Name="TPriority" Type="Int32" />
+    <Property Name="TStatus" Type="Boolean" />
+    <Property Name="ParentId" Type="Int32" />
+    <Property Name="ProjectId" Type="Int32" />
+    <Property Name="ParentTaskName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="UserId" Type="Int32" />
+    <NavigationProperty Name="tblParent" Relationship="Self.FK__tblTask__ParentI__15502E78" FromRole="tblTask" ToRole="tblParent" />
+    <NavigationProperty Name="tblProject" Relationship="Self.FK__tblTask__Project__145C0A3F" FromRole="tblTask" ToRole="tblProject" />
+  </EntityType>
+  <EntityType Name="tblUser">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="UserId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="LastName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="EmployeeId" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+  </EntityType>
+  <Association Name="FK__tblTask__ParentI__15502E78">
+    <End Role="tblParent" Type="Self.tblParent" Multiplicity="0..1" />
+    <End Role="tblTask" Type="Self.tblTask" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblParent">
+        <PropertyRef Name="ParentId" />
+      </Principal>
+      <Dependent Role="tblTask">
+        <PropertyRef Name="ParentId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__tblTask__Project__145C0A3F">
+    <End Role="tblProject" Type="Self.tblProject" Multiplicity="0..1" />
+    <End Role="tblTask" Type="Self.tblTask" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblProject">
+        <PropertyRef Name="ProjectId" />
+      </Principal>
+      <Dependent Role="tblTask">
+        <PropertyRef Name="ProjectId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="ProjectManagerEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="tblParents" EntityType="Self.tblParent" />
+    <EntitySet Name="tblProjects" EntityType="Self.tblProject" />
+    <EntitySet Name="tblTasks" EntityType="Self.tblTask" />
+    <EntitySet Name="tblUsers" EntityType="Self.tblUser" />
+    <AssociationSet Name="FK__tblTask__ParentI__15502E78" Association="Self.FK__tblTask__ParentI__15502E78">
+      <End Role="tblParent" EntitySet="tblParents" />
+      <End Role="tblTask" EntitySet="tblTasks" />
+    </AssociationSet>
+    <AssociationSet Name="FK__tblTask__Project__145C0A3F" Association="Self.FK__tblTask__Project__145C0A3F">
+      <End Role="tblProject" EntitySet="tblProjects" />
+      <End Role="tblTask" EntitySet="tblTasks" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

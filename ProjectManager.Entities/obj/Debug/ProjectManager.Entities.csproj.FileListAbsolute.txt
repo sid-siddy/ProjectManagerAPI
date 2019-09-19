@@ -1,0 +1,5 @@
+C:\SBA\ProjectManager\ProjectManager.Entities\bin\Debug\ProjectManager.Entities.dll
+C:\SBA\ProjectManager\ProjectManager.Entities\bin\Debug\ProjectManager.Entities.pdb
+C:\SBA\ProjectManager\ProjectManager.Entities\obj\Debug\ProjectManager.Entities.csprojResolveAssemblyReference.cache
+C:\SBA\ProjectManager\ProjectManager.Entities\obj\Debug\ProjectManager.Entities.dll
+C:\SBA\ProjectManager\ProjectManager.Entities\obj\Debug\ProjectManager.Entities.pdb
